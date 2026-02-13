@@ -21,7 +21,7 @@ public class DeliveryController {
     @Autowired
     private  RouteOptimizationService routeService;
 
-    @PostMapping("/optimize-route")
+    @PostMapping("/optimize/route")
     public ResponseEntity<DeliveryRouteResponse> getBestRoute(@Valid @RequestBody DeliveryRequest request) {
         return ResponseEntity.ok(routeService.findBestRoute(request));
     }

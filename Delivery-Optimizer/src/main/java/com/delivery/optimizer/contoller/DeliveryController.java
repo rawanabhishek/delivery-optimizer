@@ -25,4 +25,5 @@ public class DeliveryController {
     public ResponseEntity<DeliveryRouteResponse> getBestRoute(@Valid @RequestBody DeliveryRequest request) {
         return ResponseEntity.ok(routeService.findBestRoute(request));
     }
+
 }
